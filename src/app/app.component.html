@@ -1,0 +1,24 @@
+<nav class="navbar navbar-dark bg-primary">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Revisão</span>
+  </div>
+</nav>
+<ul class="list-group">
+  <li class="list-group-item">
+    <input type="radio" [(ngModel)]="option" [value]="1" /> Calcular Juros
+    Simples
+  </li>
+  <li class="list-group-item">
+    <input type="radio" [(ngModel)]="option" [value]="2" /> Calcular Juros
+    Compostos
+  </li>
+  <h2>Opção: {{ option }}</h2>
+  <div *ngIf="option == 1">
+    Calculo de Juros Simples
+    <app-juros-simples></app-juros-simples>
+  </div>
+  <div *ngIf="option == 2">
+    Calculo de Juros Compostos
+    <app-juros-compostos></app-juros-compostos>
+  </div>
+</ul>
